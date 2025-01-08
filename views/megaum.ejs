@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+<body onload="contarcomb()">
+    <h1>Welcome to Megaduas</h1>
+  
+    <h1>
+        <%= listTitleuma %>
+    </h1>
+    <h1>
+       res: <%= listsearch1 %><br>
+      
+    </h1>
+    <p>Essa combinação já foi sorteada <p id="tablelong"></p> vezes.</p>
+    <table border="1px" solid>
+        <thead>  
+            <tr>
+                <th>concurso</th>
+                <th>n1</th>
+                <th>n2</th>
+                <th>n3</th>
+                <th>n4</th>
+                <th>n5</th>
+                <th>n6</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-uma">
+
+
+
+            <% for(let itemb of listItemsuma){%>
+           
+                <tr>    
+                    <td><%= itemb.concurso %></td>
+                    <td><%= itemb.n1 %></td>
+                    <td><%= itemb.n2 %></td>
+                    <td><%= itemb.n3 %></td>
+                    <td><%= itemb.n4 %></td>
+                    <td><%= itemb.n5 %></td>
+                    <td><%= itemb.n6 %></td>
+                </tr>
+            </p>
+            <% } %>
+        </tbody>
+    </table>  
+    
+  <script>
+   function contarcomb(){
+            const tableconc = document.getElementById("tabela-uma");
+            const totalRows = tableconc.rows.length;
+            tablelong.innerHTML = totalRows; // il double le numero de colonnes why ????  
+   }
+  </script>
+</body>
+</html>

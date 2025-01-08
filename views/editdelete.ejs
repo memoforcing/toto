@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and delete</title>
+</head>
+<body onload=" selectconcurso()">
+
+      <form action="/delete" method="post">
+        <input type="number" name="deleteItemId" id="idcb">
+        <button type="submit">vamos delete</button>
+      </form>
+
+
+    <table  border="1px" solid>  
+        <thead>  
+            <tr>
+                <th>id</th>
+                <th>SEP</th>
+                <th>concurso</th>
+                <th>SEP</th>
+                <th>dia</th>
+                <th>mes</th>
+                <th>ano</th>
+                <th>n1</th>
+                <th>n2</th>
+                <th>n3</th>
+                <th>n4</th>
+                <th>n5</th>
+                <th>n6</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-concursos">
+
+        <% for(let item of listItems){%>
+            <tr>
+                
+            
+        <p id="title<%=item.id%>">
+        <tr>    
+            <td><%=item.id%></td>
+            <td>---</td>
+            <td id="idconcurso">  <%= item.concurso  %> </td>
+            <td>---</td>
+            <td id="iddia">  <%= item.dia  %></td>
+            <td id="idmes">  <%= item.mes  %></td>
+            <td id="idano">  <%= item.ano  %></td>
+            <td id="idn1">  <%= item.n1 %> </td>
+            <td id="idn2">  <%= item.n2 %> </td> 
+            <td id="idn3">  <%= item.n3 %> </td>
+            <td id="idn4">  <%= item.n4 %> </td>
+            <td id="idn5">  <%= item.n5 %> </td>
+            <td id="idn6">  <%= item.n6 %> </td>
+        </tr>  
+        </p>       
+        <% } %>
+    </tbody">
+</table>    
+<h2>Procure Concurso por Javascript </h2>
+<input type="number" id="concurso_BUSCA" value=" " placeholder="buscar por concurso"><br>
+<button>Buscar por Concurso</button>
+<button onclick="selectconcurso()">selecionar Concurso</button>
+
+<p id="tablelong"></p>
+<input type="number" id="idc" placeholder="idc">
+<input type="number" id="concursoc" placeholder="concursoc">
+<input type="number" id="diac" placeholder="diac">
+<input type="number" id="mesc" placeholder="mesc">
+<input type="number" id="anoc" placeholder="anoc">
+<input type="number" id="n1c" placeholder="n1c">
+<input type="number" id="n2c" placeholder="n2c">
+<input type="number" id="n3c" placeholder="n3c">
+<input type="number" id="n4c" placeholder="n4c">
+<input type="number" id="n5c" placeholder="n5c">
+<input type="number" id="n6c" placeholder="n6c">     
+
+
+
+
+
+<script>
+    // procurar por numero de  concurso inicio----------------------------
+        const INPUT_CONCURSO = document.getElementById('concurso_BUSCA');
+        const TABELA_CONCURSO = document.getElementById('tabela-concursos');
+
+       
+        INPUT_CONCURSO.addEventListener('keyup', () => {
+        let expressao = INPUT_CONCURSO.value;
+
+                if (expressao.length === 3) {
+                    return;
+                }
+
+                let linhas = TABELA_CONCURSO.getElementsByTagName('tr');
+
+                for (let posicao in linhas) {
+                   
+                    if (true === isNaN(posicao)) {
+                        continue;
+                    }
+
+                    let conteudoDaLinha = linhas[posicao].innerHTML;
+
+                    if (true === conteudoDaLinha.includes(expressao)) {
+                        linhas[posicao].style.display = '';                                             
+                    } else {
+                        linhas[posicao].style.display = 'none';                       
+                    }
+                        
+                }
+        });
+
+        //----------------------------------------------------------------
+
+        function selectconcurso(){
+
+var table = document.getElementById("tabela-concursos"),rIndex,cIndex;
+for (var i = 0; i < table.rows.length; i++)
+    {
+        for (var j = 0; j < table.rows[i].cells.length; j++)
+        {
+            table.rows[i].cells[j].onclick = function() 
+            {
+                rIndex = this.parentElement.rowIndex;
+                cIndex = this.cellIndex;
+                cIndex = this.innerHTML;
+               // cIndex = this.value;
+                console.log("Row: " + rIndex+ " Cell: " + cIndex);
+                idc.value = cIndex;
+                idcb.value = cIndex;
+               // para.innerHTML = cIndex;
+            };    
+        }
+        
+    }
+
+}
+
+</script>
+</body>
+</html>

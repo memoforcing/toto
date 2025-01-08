@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body onload="contarcomb()">
+    <h1>Welcome to Megaquatro</h1>
+  
+    <h1>
+        <%= listTitletres %>
+    </h1>
+    <h2>
+      <p id="res1"> res: <%= listsearchq1 %></p><br>
+       res: <%= listsearchq2 %><br>
+       res: <%= listsearchq3 %><br>
+       res: <%= listsearchq4 %>
+    </h2>
+     
+    <p>Essa combinação já foi sorteada <p id="tablelong"></p> vezes.</p>
+    <table border="1px" solid>
+        <thead>  
+            <tr>
+                <th>concurso</th>
+                <th>n1</th>
+                <th>n2</th>
+                <th>n3</th>
+                <th>n4</th>
+                <th>n5</th>
+                <th>n6</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-tres">
+
+
+
+            <% for(let itemb of listItemsquatro){%>
+           
+                <tr>    
+                    <td><%= itemb.concurso %></td>
+                    <td><%= itemb.n1 %></td>
+                    <td><%= itemb.n2 %></td>
+                    <td><%= itemb.n3 %></td>
+                    <td><%= itemb.n4 %></td>
+                    <td><%= itemb.n5 %></td>
+                    <td><%= itemb.n6 %></td>
+                </tr>
+            </p>
+            <% } %>
+        </tbody>
+    </table>  
+
+    <div style="width: 600px; height: 300px;">
+        <canvas id="grafico1" style="width: 600px; height: 300px; background-color: rgb(207, 192, 221);"></canvas>
+    </div>  
+
+    
+    
+  <script>
+   console.log("res1 " + res1.innerHTML)
+
+   function contarcomb(){
+            const tableconc = document.getElementById("tabela-tres");
+            const totalRows = tableconc.rows.length;
+            tablelong.innerHTML = totalRows; // il double le numero de colonnes why ????  
+   }
+
+   const ctx = document.getElementById('grafico1');
+
+let labelx = [res1.innerHTML, "USA", "Canada", "China", "France", "Japan", "UK", "Singapore" ]
+let valorex = [1,4,2,3,6,2,7,3]
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: labelx,
+    datasets: [{
+      label: '# of Votes',
+      data: valorex,
+      borderWidth: 3
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+  </script>
+</body>
+</html>

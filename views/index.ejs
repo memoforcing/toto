@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <h1>
+        <%= listTitle %>
+    </h1>
+    <h2>Insert data </h2>
+    <form class="edit" action="/goinsert" method="post">
+               <button>INSERT</button>
+      </form>
+    <!------------------------------------------------------------>
+
+    <form class="edit" action="/editaredeletar" method="post">
+        <button>Editar e Deletar</button>
+    </form> 
+
+    <!------------------------------------------------------------>
+    <h2>Procure por número de concurso </h2>
+        <form class="edit" action="/inquiry" method="post">
+            <input type="number" name="inquirying" value=" ">
+            <button>searchx</button>
+          </form>
+    <h2>Procure resultado de concurso por data </h2>
+        <form class="edit" action="/data" method="post">
+            <input type="number" name="datingday" value=" ">
+            <input type="number" name="datingmonth" value=" ">
+            <input type="number" name="datingyear" value=" ">
+            <button>search</button>
+        </form>      
+    <h2>Confere se sua aposta já foi sorteada </h2>
+        <form class="edit" action="/megasorteada" method="post">
+            <input type="number" name="n1" value=" " placeholder="n1">
+            <input type="number" name="n2" value=" " placeholder="n2">
+            <input type="number" name="n3" value=" " placeholder="n3">
+            <input type="number" name="n4" value=" " placeholder="n4">
+            <input type="number" name="n5" value=" " placeholder="n5">
+            <input type="number" name="n6" value=" " placeholder="n6">
+            <button>search</button>
+        </form>     
+        
+        <h2>Confere se esse número já foi sorteado</h2>
+        <form class="edit" action="/megauma" method="post">
+            <input type="number" name="n1u" value=" " placeholder="n1u">
+            <button>search</button>
+        </form>  
+
+        <h2>Confere se essa combinação de 2 números já foi sorteada</h2>
+        <form class="edit" action="/megaduas" method="post">
+            <input type="number" name="n1d" value=" " placeholder="n1d">
+            <input type="number" name="n2d" value=" " placeholder="n2d">
+            <button>search</button>
+        </form>       
+
+        <h2>Confere se essa combinação de 3 números já foi sorteada</h2>
+        <form class="edit" action="/megatres" method="post">
+            <input type="number" name="n1t" value=" " placeholder="n1t">
+            <input type="number" name="n2t" value=" " placeholder="n2t">
+            <input type="number" name="n3t" value=" " placeholder="n3t">
+            <button>search</button>
+        </form>       
+
+        <h2>Confere se essa combinação de 4 números já foi sorteada</h2>
+        <form class="edit" action="/megafour" method="post">
+            <input type="number" name="n1q" value=" " placeholder="n1q">
+            <input type="number" name="n2q" value=" " placeholder="n2q">
+            <input type="number" name="n3q" value=" " placeholder="n3q">
+            <input type="number" name="n4q" value=" " placeholder="n4q">
+            <button>search four</button>
+        </form>       
+
+        <h2>Confere se essa combinação de 5 números já foi sorteada</h2>
+        <form class="edit" action="/megafive" method="post">
+            <input type="number" name="n1c" value=" " placeholder="n1c">
+            <input type="number" name="n2c" value=" " placeholder="n2c">
+            <input type="number" name="n3c" value=" " placeholder="n3c">
+            <input type="number" name="n4c" value=" " placeholder="n4c">
+            <input type="number" name="n5c" value=" " placeholder="n5c">
+            <button>search five</button>
+        </form>    
+        
+        <h2>Confere grafico</h2>
+        <form class="edit" action="/vergrafico" method="post">
+            <button>visualizar grafico</button>
+        </form>   
+
+        <h2>Procure Concurso por Javascript </h2>
+            <input type="number" id="concurso_BUSCA" value=" " placeholder="javascript">
+            <button>Javascript</button>
+            <p id="tablelong"></p>
+                 
+      
+    <table>  
+        <thead>  
+            <tr>
+                <th>id</th>
+                <th>concurso</th>
+                <th>n1</th>
+                <th>n2</th>
+                <th>n3</th>
+                <th>n4</th>
+                <th>n5</th>
+                <th>n6</th>
+            </tr>
+        </thead>
+         
+        <tbody id="tabela-concursos">
+        <% for(let item of listItems){%>
+            <tr>
+                
+            
+        <p id="title<%=item.id%>">
+        <tr>    
+            <td><%=item.id%></td>
+            <td>  <%= item.concurso  %> </td>
+            <td id="idn1">  <%= item.n1 %> </td>
+            <td id="idn2">  <%= item.n2 %> </td> 
+            <td id="idn3">  <%= item.n3 %> </td>
+            <td id="idn4">  <%= item.n4 %> </td>
+            <td id="idn5">  <%= item.n5 %> </td>
+            <td id="idn6">  <%= item.n6 %> </td>
+        </tr>  
+        </p>
+       
+        <% } %>
+    </tbody">
+
+</table>         
+
+    <script>
+        
+        // procurar por numero de  concurso inicio----------------------------
+        const INPUT_CONCURSO = document.getElementById('concurso_BUSCA');
+        const TABELA_CONCURSO = document.getElementById('tabela-concursos');
+
+       
+        INPUT_CONCURSO.addEventListener('keyup', () => {
+        let expressao = INPUT_CONCURSO.value;
+
+                if (expressao.length === 3) {
+                    console.log("concc")
+                    return;
+                }
+
+                let linhas = TABELA_CONCURSO.getElementsByTagName('tr');
+
+                for (let posicao in linhas) {
+                   
+                    if (true === isNaN(posicao)) {
+                        continue;
+                    }
+
+                    let conteudoDaLinha = linhas[posicao].innerHTML;
+
+                    if (true === conteudoDaLinha.includes(expressao)) {
+                        linhas[posicao].style.display = '';                                             
+                    } else {
+                        linhas[posicao].style.display = 'none';                       
+                    }
+                        
+                }
+        });
+    // procurar por numero de  concurso inicio----------------------------
+
+   const tableconc = document.getElementById("tabela-concursos");
+   const totalRows = tableconc.rows.length;
+   tablelong.innerHTML = totalRows/2; // il double le numero de colonnes why ????  
+
+   
+</script>
+
+</body>
+</html>

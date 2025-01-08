@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="tabela">
+    <h1>
+        <%= listTitleGraph %>
+    </h1>
+    <table style="font-size:12px">  
+        <thead>  
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+                <th>13</th>
+                <th>14</th>
+                <th>15</th>
+                <th>16</th>
+                <th>17</th>
+                <th>18</th>
+                <th>19</th>
+                <th>20</th>
+                <th>21</th>
+                <th>22</th>
+                <th>23</th>
+                <th>24</th>
+                <th>25</th>
+                <th>26</th>
+                <th>27</th>
+                <th>28</th>
+                <th>29</th>
+                <th>30</th>
+                <th>31</th>
+                <th>32</th>
+
+                <th>33</th>
+                <th>34</th>
+                <th>35</th>
+                <th>36</th>
+                <th>37</th>
+                <th>38</th>
+                <th>39</th>
+                <th>40</th>
+                <th>41</th>
+                <th>42</th>
+                <th>43</th>
+                <th>44</th>
+                <th>45</th>
+                <th>46</th>
+                <th>47</th>
+                <th>48</th>
+                <th>49</th>
+                <th>50</th>
+                <th>51</th>
+                <th>52</th>
+                <th>53</th>
+                <th>54</th>
+                <th>55</th>
+                <th>56</th>
+                <th>57</th>
+                <th>58</th>
+                <th>59</th>
+                <th>60</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-concursos">
+
+        <% for(let item of listItemsGraph){%>
+            <tr>
+                
+            
+        <p id="title<%=item.id%>"></p>
+        <tr>    
+           
+            <td id="idr1">  <%= item.r1 %> </td>
+            <td id="idr2">  <%= item.r2 %> </td> 
+            <td id="idr3">  <%= item.r3 %> </td>
+            <td id="idr4">  <%= item.r4 %> </td>
+            <td id="idr5">  <%= item.r5 %> </td>
+            <td id="idr6">  <%= item.r6 %> </td>
+            <td id="idr7">  <%= item.r7 %> </td>
+            <td id="idr8">  <%= item.r8 %> </td>
+            <td id="idr9">  <%= item.r9 %> </td>
+            <td id="idr10">  <%= item.r10 %> </td> 
+            <td id="idr11">  <%= item.r11 %> </td>
+            <td id="idr12">  <%= item.r12 %> </td>
+            <td id="idr13">  <%= item.r13 %> </td>
+            <td id="idr14">  <%= item.r14 %> </td>
+            <td id="idr15">  <%= item.r15 %> </td>
+            <td id="idr16">  <%= item.r16 %> </td>
+            <td id="idr17">  <%= item.r17 %> </td>
+            <td id="idr18">  <%= item.r18 %> </td> 
+            <td id="idr19">  <%= item.r19 %> </td>
+            <td id="idr20">  <%= item.r20 %> </td>
+            <td id="idr21">  <%= item.r21 %> </td>
+            <td id="idr22">  <%= item.r22 %> </td>
+            <td id="idr23">  <%= item.r23 %> </td>
+            <td id="idr24">  <%= item.r24 %> </td>
+            <td id="idr25">  <%= item.r25 %> </td>
+            <td id="idr26">  <%= item.r26 %> </td> 
+            <td id="idr27">  <%= item.r27 %> </td>
+            <td id="idr28">  <%= item.r28 %> </td>
+            <td id="idr29">  <%= item.r29 %> </td>
+            <td id="idr30">  <%= item.r30 %> </td>
+            <td id="idr31">  <%= item.r31 %> </td>
+            <td id="idr32">  <%= item.r32 %> </td>
+
+            <td id="idr33">  <%= item.r33 %> </td>
+            <td id="idr34">  <%= item.r34 %> </td>
+            <td id="idr35">  <%= item.r35 %> </td> 
+            <td id="idr36">  <%= item.r36 %> </td>
+            <td id="idr37">  <%= item.r37 %> </td>
+            <td id="idr38">  <%= item.r38 %> </td>
+            <td id="idr39">  <%= item.r39 %> </td>
+            <td id="idr40">  <%= item.r40 %> </td>
+            <td id="idr41">  <%= item.r41 %> </td>
+
+            <td id="idr42">  <%= item.r42 %> </td>
+            <td id="idr43">  <%= item.r43 %> </td>
+            <td id="idr44">  <%= item.r44 %> </td> 
+            <td id="idr45">  <%= item.r45 %> </td>
+            <td id="idr46">  <%= item.r46 %> </td>
+            <td id="idr47">  <%= item.r47 %> </td>
+            <td id="idr48">  <%= item.r48 %> </td>
+            <td id="idr49">  <%= item.r49 %> </td>
+            <td id="idr50">  <%= item.r50 %> </td>
+
+            <td id="idr51">  <%= item.r51 %> </td>
+            <td id="idr52">  <%= item.r52 %> </td>
+            <td id="idr53">  <%= item.r53 %> </td>
+            <td id="idr54">  <%= item.r54 %> </td> 
+            <td id="idr55">  <%= item.r55 %> </td>
+            <td id="idr56">  <%= item.r56 %> </td>
+            <td id="idr57">  <%= item.r57 %> </td>
+            <td id="idr58">  <%= item.r58 %> </td>
+            <td id="idr59">  <%= item.r59 %> </td>
+            <td id="idr60">  <%= item.r60 %> </td>
+        </tr>             
+        <% } %>
+    </table>
+
+    <p hidden id="t1"></p><p hidden id="t2"></p><p hidden id="t3"></p><p hidden id="t4"></p><p hidden id="t5"></p>
+    <p hidden id="t6"></p><p hidden id="t7"></p><p hidden id="t8"></p><p hidden id="t9"></p><p hidden id="t10"></p>
+    <p hidden id="t11"></p><p hidden id="t12"></p><p hidden id="t13"></p><p hidden id="t14"></p><p hidden id="t15"></p><p hidden id="t16"></p>
+    <p hidden id="t17"></p><p hidden id="t18"></p><p hidden id="t19"></p><p hidden id="t20"></p><p hidden id="t21"></p><p hidden id="t22"></p>
+    <p hidden id="t23"></p>
+    <p hidden id="t24"></p><p hidden id="t25"></p><p hidden id="t26"></p><p hidden id="t27"></p><p hidden id="t28"></p><p hidden id="t29"></p>
+    <p hidden id="t30"></p><p hidden id="t31"></p><p hidden id="t32"></p><p hidden id="t33"></p>
+    <p hidden id="t34"></p><p hidden id="t35"></p><p hidden id="t36"></p>
+
+    <p hidden id="t37"></p><p hidden id="t38"></p><p hidden id="t39"></p><p hidden id="t40"></p>
+    <p hidden id="t41"></p><p hidden id="t42"></p>
+    <p hidden id="t43"></p><p hidden id="t44"></p><p hidden id="t45"></p><p hidden id="t46"></p>
+    <p hidden id="t47"></p><p hidden id="t48"></p><p hidden id="t49"></p><p hidden id="t50"></p>
+
+    <p hidden id="t51"></p><p hidden id="t52"></p><p hidden id="t53"></p><p hidden id="t54"></p>
+    <p hidden id="t55"></p><p hidden id="t56"></p><p hidden id="t57"></p><p hidden id="t58"></p>
+    <p hidden id="t59"></p><p hidden id="t60"></p>
+   
+   
+    </div>
+    <div style="width: 1350px; height: 300px;">
+      <canvas id="grafico1" style="width: 1350px; height: 300px; background-color: rgb(207, 192, 221);"></canvas>
+  </div>    
+ 
+        <script>
+          t1.innerHTML = document.getElementById("idr1").innerHTML;
+          let a1 =  t1.innerHTML;
+          t2.innerHTML = document.getElementById("idr2").innerHTML;
+          let a2 = t2.innerHTML;
+          t3.innerHTML = document.getElementById("idr3").innerHTML;
+          let a3 =  t3.innerHTML;
+          t4.innerHTML = document.getElementById("idr4").innerHTML;
+          let a4 = t4.innerHTML;
+          t5.innerHTML = document.getElementById("idr5").innerHTML; // pblm
+          let a5 =  t5.innerHTML;
+          t6.innerHTML = document.getElementById("idr6").innerHTML;
+          let a6 = t6.innerHTML;
+          t7.innerHTML = document.getElementById("idr7").innerHTML;
+          let a7 =  t7.innerHTML;
+          t8.innerHTML = document.getElementById("idr8").innerHTML;
+          let a8 = t8.innerHTML;
+          t9.innerHTML = document.getElementById("idr9").innerHTML;
+          let a9 =  t9.innerHTML;
+          t10.innerHTML = document.getElementById("idr10").innerHTML;
+          let a10 = t10.innerHTML;
+
+          t11.innerHTML = document.getElementById("idr11").innerHTML;
+          let a11 = t11.innerHTML;
+          t12.innerHTML = document.getElementById("idr12").innerHTML;
+          let a12 =  t12.innerHTML;
+          t13.innerHTML = document.getElementById("idr13").innerHTML;
+          let a13 = t13.innerHTML;
+          t14.innerHTML = document.getElementById("idr14").innerHTML;
+          let a14 =  t14.innerHTML;
+          t15.innerHTML = document.getElementById("idr15").innerHTML;
+          let a15 = t15.innerHTML;
+          t16.innerHTML = document.getElementById("idr16").innerHTML;
+          let a16 = t16.innerHTML;
+
+          t17.innerHTML = document.getElementById("idr17").innerHTML;
+          let a17 = t17.innerHTML;
+          t18.innerHTML = document.getElementById("idr18").innerHTML;
+          let a18 =  t18.innerHTML;
+          t19.innerHTML = document.getElementById("idr19").innerHTML;
+          let a19 = t19.innerHTML;
+          t20.innerHTML = document.getElementById("idr20").innerHTML;
+          let a20 =  t20.innerHTML;
+          t21.innerHTML = document.getElementById("idr21").innerHTML;
+          let a21 = t21.innerHTML;
+          t22.innerHTML = document.getElementById("idr22").innerHTML;
+          let a22 = t22.innerHTML;
+          t23.innerHTML = document.getElementById("idr23").innerHTML;
+          let a23 = t23.innerHTML;
+
+          t24.innerHTML = document.getElementById("idr24").innerHTML;
+          let a24 = t24.innerHTML;
+          t25.innerHTML = document.getElementById("idr25").innerHTML;
+          let a25 =  t25.innerHTML;
+          t26.innerHTML = document.getElementById("idr26").innerHTML;
+          let a26 = t26.innerHTML;
+          t27.innerHTML = document.getElementById("idr27").innerHTML;
+          let a27 =  t27.innerHTML;
+          t28.innerHTML = document.getElementById("idr28").innerHTML;
+          let a28 = t28.innerHTML;
+          t29.innerHTML = document.getElementById("idr29").innerHTML;
+          let a29 = t29.innerHTML;
+          t30.innerHTML = document.getElementById("idr30").innerHTML;
+          let a30 = t30.innerHTML;
+
+          t31.innerHTML = document.getElementById("idr31").innerHTML;
+          let a31 = t31.innerHTML;
+          t32.innerHTML = document.getElementById("idr32").innerHTML;
+          let a32 = t32.innerHTML;
+          t33.innerHTML = document.getElementById("idr33").innerHTML;
+          let a33 = t33.innerHTML;
+          t34.innerHTML = document.getElementById("idr34").innerHTML;
+          let a34 = t34.innerHTML;
+          t35.innerHTML = document.getElementById("idr35").innerHTML;
+          let a35 = t35.innerHTML;
+          t36.innerHTML = document.getElementById("idr36").innerHTML;
+          let a36 = t36.innerHTML;
+
+          t37.innerHTML = document.getElementById("idr37").innerHTML;
+          let a37 = t37.innerHTML;
+          t38.innerHTML = document.getElementById("idr38").innerHTML;
+          let a38 = t38.innerHTML;
+          t39.innerHTML = document.getElementById("idr39").innerHTML;
+          let a39 = t39.innerHTML;
+          t40.innerHTML = document.getElementById("idr40").innerHTML;
+          let a40 = t40.innerHTML;
+          t41.innerHTML = document.getElementById("idr41").innerHTML;
+          let a41 = t41.innerHTML;
+          t42.innerHTML = document.getElementById("idr42").innerHTML;
+          let a42 = t42.innerHTML;
+
+          t43.innerHTML = document.getElementById("idr43").innerHTML;
+          let a43 = t43.innerHTML;
+          t44.innerHTML = document.getElementById("idr44").innerHTML;
+          let a44 = t44.innerHTML;
+          t45.innerHTML = document.getElementById("idr45").innerHTML;
+          let a45 = t45.innerHTML;
+          t46.innerHTML = document.getElementById("idr46").innerHTML;
+          let a46 = t46.innerHTML;
+          t47.innerHTML = document.getElementById("idr47").innerHTML;
+          let a47 = t47.innerHTML;
+          t48.innerHTML = document.getElementById("idr48").innerHTML;
+          let a48 = t48.innerHTML;
+          t49.innerHTML = document.getElementById("idr49").innerHTML;
+          let a49 = t49.innerHTML;
+          t50.innerHTML = document.getElementById("idr50").innerHTML;
+          let a50 = t50.innerHTML;
+
+          t51.innerHTML = document.getElementById("idr51").innerHTML;
+          let a51 = t51.innerHTML;
+          t52.innerHTML = document.getElementById("idr52").innerHTML;
+          let a52 = t52.innerHTML;
+          t53.innerHTML = document.getElementById("idr53").innerHTML;
+          let a53 = t53.innerHTML;
+          t54.innerHTML = document.getElementById("idr54").innerHTML;
+          let a54 = t54.innerHTML;
+          t55.innerHTML = document.getElementById("idr55").innerHTML;
+          let a55 = t55.innerHTML;
+          t56.innerHTML = document.getElementById("idr56").innerHTML;
+          let a56 = t56.innerHTML;
+          t57.innerHTML = document.getElementById("idr57").innerHTML;
+          let a57 = t57.innerHTML;
+          t58.innerHTML = document.getElementById("idr58").innerHTML;
+          let a58 = t58.innerHTML;
+
+          t59.innerHTML = document.getElementById("idr59").innerHTML;
+          let a59 = t59.innerHTML;
+          t60.innerHTML = document.getElementById("idr60").innerHTML;
+          let a60 = t60.innerHTML;
+
+//------------------------------grafico-------------------------------
+const ctx = document.getElementById('grafico1');
+
+let labelx = ["1", "2", "3", "4", "5", "6", "7", "8" ,"9", "10", "11", "12", "13", "14" ,"15", "16", "17", "18", "19", "20", "21" ,"22", "23",
+  "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36","37","38","39","40","41","42","43","44","45","46","47","48","49","50",
+"51","52","53","54","55","56","57","58","59","60"]
+let valorex = [a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28,a29,a30,a31,a32,a33,a34,a35,a36,
+  a37,a38,a39,a40,a41,a42,a43,a44,a45,a46,a47,a48,a49,a50,a51,a52,a53,a54,a55,a56,a57,a58,a59,a60]
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: labelx,
+    datasets: [{
+      label: 'vezes sorteados',
+      data: valorex,
+      borderWidth: 5
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+        </script>
+    
+</body>
+</html>

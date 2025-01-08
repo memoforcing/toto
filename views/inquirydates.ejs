@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+<body>
+    <h1>Welcome to InquiryDates</h1>
+    <h1>
+        <%= listTitlec %>
+    </h1>
+    <% for(let itemb of listItemsc){%>
+      <p id="title<%=itemb.id%>">
+       <%= itemb.concurso %>
+       -------
+       <%= itemb.n1 %>
+       <%= itemb.n2 %>
+       <%= itemb.n3 %>
+       <%= itemb.n4 %>
+       <%= itemb.n5 %>
+       <%= itemb.n6 %>
+      </p>
+      <% } %>
+  
+</body>
+</html>
