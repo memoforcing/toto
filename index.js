@@ -16,17 +16,31 @@ db.connect();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-//app.use(express.static(".")); // otherwise layout.css doesn't work i don't know why...
+app.use(express.static(".")); // otherwise layout.css doesn't work i don't know why...
 
 let items = [];
 
 app.get("/", async (req, res) => {
   try {
-    const result = await db.query("SELECT concurso, to_char(n1, '00') as n1, to_char(n2, '00') as n2, to_char(n3, '00') as n3, to_char(n4, '00') n4, to_char(n5, '00') n5, to_char(n6, '00') n6 FROM sena ORDER BY concurso DESC");
+    const result = await db.query("SELECT to_char(concurso, '0000') as concurso, to_char(n1, '00') as n1, to_char(n2, '00') as n2, to_char(n3, '00') as n3, to_char(n4, '00') as n4, to_char(n5, '00') as n5, to_char(n6, '00') n6 FROM sena ORDER BY concurso DESC");
     items = result.rows;
 
     res.render("index.ejs", {
       listTitle: "Mega Sena",
+      listItems: items,      
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
+// ---------------------------------------top------------------------------------
+app.post("/extremes", async (req, res) => {
+  try {
+    const result = await db.query("select id, res, vezes from topbottom order by vezes desc");
+    items = result.rows;
+
+    res.render("top.ejs", {
+      listTitle: "Os mais sorteados",
       listItems: items,      
     });
   } catch (err) {
@@ -301,3 +315,9 @@ app.post("/data", async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
   });
+//--------------------------------------mega sena table--------------------------------
+
+app.post("/goinput", async (req, res) => {
+  console.log("no post goinput")
+  res.render("tableinput.ejs");
+});

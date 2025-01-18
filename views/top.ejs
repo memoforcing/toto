@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="tops()">
+    <h1>
+        <%= listTitle %>
+    </h1>
+
+    <table>  
+        <thead>  
+            <tr>               
+                <th>numero</th>
+                <th>sorteado</th>               
+            </tr>
+        </thead>
+         
+        <tbody id="topsixs">
+        <% for(let item of listItems){%>
+            <tr>    
+                <td id="idres">  <%= item.res %> </td>
+                <td id="idvezes"> <%= item.vezes %> </td>             
+            </tr>          
+        <% } %>
+    </tbody">
+
+</table>       
+---------------------------------------------------------------------------------------------
+<p id="top1">oi</p><p id="top2"></p><p id="top3"></p><p id="top4"></p><p id="top5"></p><p id="top6"></p>
+---------------------------------------------------------------------------------------------
+<p id="bot1"></p><p id="bot2"></p><p id="bot3"></p><p id="bot4"></p><p id="bot5"></p><p id="bot6"></p>
+<button onclick="tops()">On click... </button>
+<script>
+    function tops(){
+        console.log("entrou");
+        var table = document.getElementById('topsixs'),rIndex;
+        document.getElementById("top1").innerHTML = table.rows[0].cells[0].innerHTML;  
+        document.getElementById("top2").innerHTML = table.rows[1].cells[0].innerHTML;
+        document.getElementById("top3").innerHTML = table.rows[2].cells[0].innerHTML;  
+        document.getElementById("top4").innerHTML = table.rows[3].cells[0].innerHTML;  
+        document.getElementById("top5").innerHTML = table.rows[4].cells[0].innerHTML;  
+        document.getElementById("top6").innerHTML = table.rows[5].cells[0].innerHTML;     
+        
+        document.getElementById("bot1").innerHTML = table.rows[59].cells[0].innerHTML;  
+        document.getElementById("bot2").innerHTML = table.rows[58].cells[0].innerHTML;
+        document.getElementById("bot3").innerHTML = table.rows[57].cells[0].innerHTML;  
+        document.getElementById("bot4").innerHTML = table.rows[56].cells[0].innerHTML;  
+        document.getElementById("bot5").innerHTML = table.rows[55].cells[0].innerHTML;  
+        document.getElementById("bot6").innerHTML = table.rows[54].cells[0].innerHTML;   
+    }   
+      
+ 
+</script>
+
+    
+</body>
+</html>

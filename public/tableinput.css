@@ -1,0 +1,580 @@
+.table{
+    background-color: rgb(32, 210, 121);
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.numbers{
+    background-color: rgb(205, 222, 213);
+    width: 100%;
+    height: 100%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;    
+    align-items: center;   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.r1{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.r2{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.r3{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.r4{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.r5{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.r6{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.num{
+    width: 60px;  
+}
+.n1{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n2{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n3{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n4{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n5{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n6{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n7{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n8{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n9{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n10{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n11{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n12{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n13{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n14{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n15{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n16{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n17{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n18{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n19{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n20{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n21{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n22{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n23{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n24{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n25{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n26{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n27{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n28{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n29{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n30{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n31{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n32{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n33{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n34{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n35{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n36{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n37{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n38{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n39{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n40{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+
+.n41{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n42{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n43{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n44{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n45{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n46{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n47{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n48{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n49{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n50{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+
+
+.n51{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n52{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n53{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n54{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n55{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n56{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n57{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n58{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n59{
+    width: 8.3%;
+    background-color: rgb(168, 163, 16);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+.n60{
+    width: 8.3%;
+    background-color: rgb(210, 230, 24);
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+
+.chbxs{
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-around; 
+    color: black;
+}
+
+.chbx{
+    margin-top: 30px;
+    background-color: cadetblue;
+    color: rgb(1, 1, 10);
+    justify-content: space-around; 
+}
+
+.avisoProblema{
+    display: flex;
+    color: red;
+    align-items: center;
+    justify-content: center;
+}

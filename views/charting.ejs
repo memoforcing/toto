@@ -6,7 +6,7 @@
     <title>Grafico</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+<body onload="testarrays()">
     <div id="tabela">
     <h1>
         <%= listTitleGraph %>
@@ -153,6 +153,7 @@
         <% } %>
     </table>
 
+
     <p hidden id="t1"></p><p hidden id="t2"></p><p hidden id="t3"></p><p hidden id="t4"></p><p hidden id="t5"></p>
     <p hidden id="t6"></p><p hidden id="t7"></p><p hidden id="t8"></p><p hidden id="t9"></p><p hidden id="t10"></p>
     <p hidden id="t11"></p><p hidden id="t12"></p><p hidden id="t13"></p><p hidden id="t14"></p><p hidden id="t15"></p><p hidden id="t16"></p>
@@ -176,6 +177,24 @@
     <div style="width: 1350px; height: 300px;">
       <canvas id="grafico1" style="width: 1350px; height: 300px; background-color: rgb(207, 192, 221);"></canvas>
   </div>    
+
+<!-----------------------------------------tabela2--------------------------------------------->
+<table style="font-size:12px">  
+  <thead>  
+      <tr>
+        <th>Numero</th>
+        <th>vezes</th>
+      </tr>
+    </thead>
+    <tbody id="fromarrays" class="fromarrays" name="fromarrays"></tbody>
+
+</table>    
+<button id="testing" onclick="sortTable()">to sort</button>
+
+
+
+  <p id="c1"></p><p id="c2"></p><p id="c3"></p><p id="c4"></p><p id="c5"></p><p id="c6"></p>
+  <!--*******************************************************************************-->
  
         <script>
           t1.innerHTML = document.getElementById("idr1").innerHTML;
@@ -334,6 +353,88 @@ new Chart(ctx, {
     }
   }
 });
+
+const getArray1 = [];
+const getArray2 = [];
+const getArray3 = [];
+var rv;
+
+
+function testarrays(){
+  
+var table = document.getElementById("tabela-concursos");
+for (var i = 0; i < 60; i++){
+        console.log(table.rows[1].cells[i].innerHTML);
+        rv = table.rows[1].cells[i].innerHTML 
+        console.log("rv " + rv);
+        getArray1.push(i + 1);
+        getArray2.push(rv);          
+    }
+     // array to table
+    var tabelaabody = document.getElementsByName('fromarrays')[0];
+    console.log("getArray1 = " + getArray1.length);
+
+    for(i = 0; i < getArray1.length; i++){ 
+        var col1 = getArray1[i];
+        var col2 = getArray2[i];
+
+        var newRow = tabelaabody.insertRow(i);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+
+        cell1.innerHTML = col1;
+        cell2.innerHTML = col2;
+
+        console.log("cell1 " + cell1.innerHTML);
+        console.log("cell2 " + cell1.innerHTML);
+
+    }   
+    maxing();
+}
+
+ // --------------------------------sort----------------------
+ var tablexx = document.getElementById("fromarrays"), maxVal, maxRef;
+ var maxVal1, maxRef1;
+ function maxing(){
+  
+  for (var i = 0; i < tablexx.rows.length; i++){
+      // if its the first row get th value
+      if(i === 0){
+                    maxVal = tablexx.rows[i].cells[1].innerHTML;
+                    maxRef = tablexx.rows[i].cells[0].innerHTML;
+                }
+       // test the values
+       else if(maxVal < tablexx.rows[i].cells[1].innerHTML)
+                {
+                    maxVal = tablexx.rows[i].cells[1].innerHTML;
+                    maxRef = tablexx.rows[i].cells[0].innerHTML;
+                }          
+  }   
+  c1.innerHTML = maxVal;
+  c2.innerHTML = maxRef;
+  //console.log("maxRef " + maxRef);
+
+  for (var i = 0; i < tablexx.rows.length; i++){
+      // if its the first row get th value
+      if(i === 0){
+                    maxVal1 = tablexx.rows[i].cells[1].innerHTML;
+                    maxRef1 = tablexx.rows[i].cells[0].innerHTML;
+                }
+       // test the values
+       else if((maxVal1 < tablexx.rows[i].cells[1].innerHTML) && (parseInt(maxRef1) != parseInt(maxRef)))
+                {
+                    console.log("check maxref1 " + maxRef1);
+                    console.log("check maxref " + maxRef);
+                    maxVal1 = tablexx.rows[i].cells[1].innerHTML;
+                    maxRef1 = tablexx.rows[i].cells[0].innerHTML;
+                }          
+  }   
+  c3.innerHTML = maxVal1;
+  c4.innerHTML = maxRef1;
+ // console.log("maxRef " + maxRef);
+}
+
         </script>
     
 </body>

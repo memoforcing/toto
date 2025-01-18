@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charts</title>
+    <link rel="stylesheet" href="/public/tableinput.css">
+</head>
+<body>
+    <h2>Veja se sua aposta ja siu</h2>
+    <div class="table">
+        <div class="numbers">
+            <div class="r1">
+                <div class="num n1" id="n1">1</div>
+                <div class="num n2" id="n2">2</div>
+                <div class="num n3" id="n3">3</div>
+                <div class="num n4" id="n4">4</div>
+                <div class="num n5" id="n5">5</div>
+                <div class="num n6" id="n6">6</div>
+                <div class="num n7" id="n7">7</div>
+                <div class="num n8" id="n8">8</div>
+                <div class="num n9" id="n9">9</div>
+                <div class="num n10" id="n10">10</div>               
+            </div>
+            <div class="r2">
+                <div class="num n11" id="n11">11</div>
+                <div class="num n12" id="n12">12</div>
+                <div class="num n13" id="n13">13</div>
+                <div class="num n14" id="n14">14</div>
+                <div class="num n15" id="n15">15</div>
+                <div class="num n16" id="n16">16</div>
+                <div class="num n17" id="n17">17</div>
+                <div class="num n18" id="n18">18</div>
+                <div class="num n19" id="n19">19</div>
+                <div class="num n20" id="n20">20</div>               
+            </div>
+            <div class="r2">
+                <div class="num n21">21</div>
+                <div class="num n22">22</div>
+                <div class="num n23">23</div>
+                <div class="num n24">24</div>
+                <div class="num n25">25</div>
+                <div class="num n26">26</div>
+                <div class="num n27">27</div>
+                <div class="num n18">28</div>
+                <div class="num n29">29</div>
+                <div class="num n30">30</div>               
+            </div>
+            <div class="r4">
+                <div class="num n31">31</div>
+                <div class="num n32">32</div>
+                <div class="num n33">33</div>
+                <div class="num n34">34</div>
+                <div class="num n35">35</div>
+                <div class="num n36">36</div>
+                <div class="num n37">37</div>
+                <div class="num n38">38</div>
+                <div class="num n39">39</div>
+                <div class="num n40">40</div>               
+            </div>
+            <div class="r5">
+                <div class="num n41">41</div>
+                <div class="num n42">42</div>
+                <div class="num n43">43</div>
+                <div class="num n44">44</div>
+                <div class="num n45">45</div>
+                <div class="num n46">46</div>
+                <div class="num n47">47</div>
+                <div class="num n48">48</div>
+                <div class="num n49">49</div>
+                <div class="num n50">50</div>               
+            </div>
+            <div class="r6">
+                <div class="num n51">51</div>
+                <div class="num n52">52</div>
+                <div class="num n53">53</div>
+                <div class="num n54">54</div>
+                <div class="num n55">55</div>
+                <div class="num n56">56</div>
+                <div class="num n57">57</div>
+                <div class="num n58">58</div>
+                <div class="num n59">59</div>
+                <div class="num n60">60</div>               
+            </div>
+        </div>
+        <div class="chbxs">
+           <input type="number" id="g1" class="chbx" placeholder="n1">
+           <input type="number" id="g2" class="chbx" placeholder="n2">
+           <input type="number" id="g3" class="chbx" placeholder="n3">
+           <input type="number" id="g4" class="chbx" placeholder="n3">
+           <input type="number" id="g5" class="chbx" placeholder="n5">
+           <input type="number" id="g6" class="chbx" placeholder="n6">
+        </div>               
+    </div>
+    <div>
+        <p id="avisoProblema" class="avisoProblema"></p>
+    </div>
+    <script>
+        var totalCases = document.querySelectorAll(".num").length;
+        var aux;
+        var totalInput = document.querySelectorAll(".chbx").length;
+        var count = 0;
+
+       for (var i=0; i < totalCases; i++){
+            document.querySelectorAll(".num")[i].addEventListener("click", function(){
+       // console.log(i);
+       // console.log("I was clicked " + i + "times");
+       // console.log(this.innerHTML);
+       //this.style.color = "green";
+
+            var numberInnerHTML = this.innerHTML;
+      
+      
+       switch(numberInnerHTML){
+       case "1":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n1").style.color = "red"; 
+                document.getElementById("n1").innerHTML = "X"
+                count = count + 1;
+            }
+        break;
+        case "2":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n2").style.color = "red"; 
+                document.getElementById("n2").innerHTML = "X"
+                count = count + 1;
+            }
+        break;
+        case "3":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n3").style.color = "red"; 
+                document.getElementById("n3").innerHTML = "X"
+                count = count + 1;
+            }
+        break;
+        case "4":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n4").style.color = "red"; 
+                document.getElementById("n4").innerHTML = "X"
+                count = count + 1;
+            }
+        break;
+        case "5":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);   
+            if (count < 6){
+                document.getElementById("n5").style.color = "red"; 
+                document.getElementById("n5").innerHTML = "X"
+                count = count + 1;
+            }       
+        break;
+        case "6":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);  
+            if (count < 6){
+                document.getElementById("n6").style.color = "red"; 
+                document.getElementById("n6").innerHTML = "X"
+                count = count + 1;
+            }           
+        break;
+
+        case "7":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n7").style.color = "red"; 
+                document.getElementById("n7").innerHTML = "X"
+                count = count + 1;
+            }
+           
+        break;
+        case "8":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n8").style.color = "red"; 
+                document.getElementById("n8").innerHTML = "X"
+                count = count + 1;
+            }
+         
+        break;
+        case "9":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n9").style.color = "red"; 
+                document.getElementById("n9").innerHTML = "X"
+                count = count + 1;
+            }
+           
+        break;
+
+        case "10":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n10").style.color = "red"; 
+                document.getElementById("n10").innerHTML = "X"
+                count = count + 1;
+            }
+           
+        break;
+        case "11":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n11").style.color = "red"; 
+                document.getElementById("n11").innerHTML = "X"
+                count = count + 1;
+            }
+           
+        break;
+        case "12":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n12").style.color = "red"; 
+                document.getElementById("n12").innerHTML = "X"
+                count = count + 1;
+            }
+            
+        break;
+
+        case "13":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n13").style.color = "red"; 
+                document.getElementById("n13").innerHTML = "X"
+                count = count + 1;
+            }         
+        break;
+        case "14":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n14").style.color = "red"; 
+                document.getElementById("n14").innerHTML = "X"
+                count = count + 1;
+            }
+           
+        break;
+        case "15":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n15").style.color = "red"; 
+                document.getElementById("n15").innerHTML = "X"
+                count = count + 1;
+            }
+           
+           
+        break;
+
+        case "16":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n16").style.color = "red"; 
+                document.getElementById("n16").innerHTML = "X"
+                count = count + 1;
+            }
+           
+           
+        break;
+        case "17":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n17").style.color = "red"; 
+                document.getElementById("n17").innerHTML = "X"
+                count = count + 1;
+            }
+           
+           
+        break;
+        case "18":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n18").style.color = "red"; 
+                document.getElementById("n18").innerHTML = "X"
+                count = count + 1;
+            }
+           
+           
+        break;
+
+        case "19":
+            console.log("inside break " + numberInnerHTML);
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n19").style.color = "red"; 
+                document.getElementById("n19").innerHTML = "X"
+                count = count + 1;
+            }
+           
+           
+        break;
+        case "20":
+            console.log("inside break " + numberInnerHTML); 
+            aux = numberInnerHTML;
+            testIfInputEmpty(aux);
+            if (count < 6){
+                document.getElementById("n20").style.color = "red"; 
+                document.getElementById("n20").innerHTML = "X"
+                count = count + 1;
+            }
+               
+          
+        break;
+
+        case "22":
+            console.log("inside break " + numberInnerHTML);
+          
+        break;
+        case "23":
+            console.log("inside break " + numberInnerHTML);
+           
+        break;
+        case "24":
+            console.log("inside break " + numberInnerHTML);
+           
+        break;
+
+        case "25":
+            console.log("inside break " + numberInnerHTML);
+          
+        break;
+        case "26":
+            console.log("inside break " + numberInnerHTML);
+         
+        break;
+        case "27":
+            console.log("inside break " + numberInnerHTML);
+          
+        break;
+
+        case "28":
+            console.log("inside break " + numberInnerHTML);
+         
+        break;
+        case "29":
+            console.log("inside break " + numberInnerHTML);
+          
+        break;
+        case "30":
+            console.log("inside break " + numberInnerHTML);
+            
+        break;
+
+        case "31":
+            console.log("inside break " + numberInnerHTML);
+            
+        break;
+        case "32":
+            console.log("inside break " + numberInnerHTML);
+          
+        break;
+        case "33":
+            console.log("inside break " + numberInnerHTML);
+           
+        break;
+
+        case "34":
+            console.log("inside break " + numberInnerHTML);
+        
+        break;
+        case "35":
+            console.log("inside break " + numberInnerHTML);
+            
+        break;
+        case "36":
+            console.log("inside break " + numberInnerHTML);
+           
+        break;
+
+
+        default: console.log("default " + numberInnerHTML);
+       }
+    })    
+    }
+    function testIfInputEmpty(aux){
+        console.log("at testIfInputEmpty " + aux)
+        
+            console.log(aux);
+            if(g1.value === ""){
+                g1.value = aux;
+            }else
+            if(g2.value === ""){
+                g2.value = aux;
+            }else
+            if(g3.value === ""){
+                g3.value = aux;
+            }else
+            if(g4.value === ""){
+                g4.value = aux;
+            }else
+            if(g5.value === ""){
+                g5.value = aux;
+            }else
+            if(g6.value === ""){
+                g6.value = aux;
+            }        
+    }
+    
+    </script>  
+    
+</body>
+</html>
